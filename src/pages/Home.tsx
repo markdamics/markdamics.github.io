@@ -13,8 +13,7 @@ export function Home() {
           <div className="maho-label hero__eyebrow">FULL STACK SOFTWARE DEVELOPER</div>
           <h1 className="hero__title">Mark Damics</h1>
           <p className="hero__lede">
-            I build frontends with React, TypeScript, and JavaScript, and ship the projects
-            behind them on GitHub.
+            I like to build softwares which can help others in their daily life.
           </p>
           <div className="hero__actions">
             <Button variant="primary" iconAfter="arrow-right" onClick={() => navigate('/projects')}>

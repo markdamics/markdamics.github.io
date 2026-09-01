@@ -5,7 +5,7 @@ export interface Project {
   tech: string[];
 }
 
-export const skills: string[] = ['React', 'TypeScript', 'JavaScript'];
+export const skills: string[] = ['Java', 'Spring Boot', 'JavaFX', 'TypeScript', 'JavaScript', 'React', 'PostgreSQL', 'MSSQL', 'Microservices', 'Websockets', 'APIs', 'Kafka', 'Shell Script', 'Rust', 'Linux', 'Docker', 'DevOps', 'CI/CD', 'AI tools'];
 
 export const projects: Project[] = [
   {

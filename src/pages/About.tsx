@@ -11,7 +11,7 @@ export function About() {
         Mark Damics
       </h2>
       <p className="about__lede">
-        I am a full stack software developer. I li
+        Results driven Full Stack Developer with 5+ years of experience. Proven track record in designing, developing and deploying software solutions. Highly adaptable and eager to gain more experience. Passionate about continuously developing my programming skills and learning new technologies.
       </p>
       <p className="about__lede about__lede--last">
         My projects, including Logic and DevScribe, are on GitHub. I keep building and shipping
