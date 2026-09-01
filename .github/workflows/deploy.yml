@@ -32,9 +32,8 @@ jobs:
       - name: List build output
         run: ls -la dist
 
-      # Use the Pages-specific uploader (required for Pages deployments)
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
 
