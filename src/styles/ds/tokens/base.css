@@ -1,0 +1,18 @@
+/* Minimal global floor. Consumers get resets, type defaults and link colors. */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{margin:0;background:var(--bg-canvas);color:var(--text-body);font:var(--type-body);text-wrap:pretty}
+h1,h2,h3,h4{margin:0;font-family:var(--font-display);font-weight:var(--weight-regular);color:var(--text-strong);letter-spacing:var(--tracking-display)}
+h1{font-size:var(--text-display-2);line-height:var(--leading-tight)}
+h2{font-size:var(--text-display-3);line-height:var(--leading-snug)}
+h3{font-size:var(--text-title);line-height:var(--leading-snug)}
+h4{font-size:var(--text-heading);line-height:var(--leading-snug)}
+p{margin:0}
+a{color:var(--text-accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent-solid) 26%,transparent);transition:color var(--dur-fast) var(--ease-standard),border-color var(--dur-fast) var(--ease-standard)}
+a:hover{color:var(--washi-100);border-bottom-color:var(--border-focus)}
+[data-theme="light"] a:hover{color:var(--ink-900)}
+code,kbd{font-family:var(--font-mono);font-size:.92em}
+::selection{background:var(--accent-quiet);color:var(--text-strong)}
+:focus-visible{outline:none;box-shadow:var(--glow-focus)}
+.maho-label{font:var(--type-label);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-faint)}
+.maho-rule{height:1px;background:var(--border-hairline);border:0}

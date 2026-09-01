@@ -1,0 +1,83 @@
+/* Maho — Yoru palette. Dark is the native theme; light ("Asa") is a full peer. */
+:root{
+  /* ink — structural darks */
+  --ink-1000:#04060A;--ink-900:#070A0F;--ink-800:#0B1017;--ink-700:#111823;--ink-600:#18212F;--ink-500:#222D3D;--ink-400:#2E3B4C;
+  /* mist — neutrals that carry text and hairlines */
+  --mist-500:#43526490;--mist-400:#5A6879;--mist-300:#8794A4;--mist-200:#B4C0CD;--mist-100:#DCE3EB;
+  /* washi — paper whites */
+  --washi-100:#F5F7FA;--washi-200:#E9EDF3;
+  /* tsuki — moonlight accent */
+  --tsuki-200:#DCEBF7;--tsuki-300:#B7D8F0;--tsuki-400:#8CBFE4;--tsuki-500:#5C9BC9;--tsuki-600:#3E7AA6;
+  /* shu — vermilion seal, used once per view at most */
+  --shu-400:#E4714D;--shu-500:#CF5533;--shu-600:#A84124;
+  /* muted semantics */
+  --matcha-500:#6E9E7F;--kohaku-500:#C4963F;
+
+  /* ---- semantic aliases (dark / Yoru) ---- */
+  --bg-canvas:var(--ink-1000);
+  --bg-base:var(--ink-900);
+  --surface-card:var(--ink-800);
+  --surface-raised:var(--ink-700);
+  --surface-sunken:var(--ink-1000);
+  --surface-inset:#0B101780;
+  --surface-hover:#1822300f;
+  --overlay-scrim:#04060Ac9;
+
+  --text-strong:var(--washi-100);
+  --text-body:var(--mist-100);
+  --text-muted:var(--mist-300);
+  --text-faint:var(--mist-400);
+  --text-inverse:var(--ink-900);
+  --text-accent:var(--a-300);
+  --text-seal:var(--shu-400);
+
+  --border-hairline:#2E3B4C99;
+  --border-strong:var(--ink-400);
+  --border-accent:var(--a-500);
+  --border-focus:var(--a-400);
+
+  --accent-solid:var(--a-400);
+  --accent-solid-hover:var(--a-300);
+  --accent-quiet:color-mix(in srgb,var(--a-400) 12%,transparent);
+  --accent-on:var(--ink-900);
+  --seal-solid:var(--shu-500);
+
+  --status-success:var(--matcha-500);
+  --status-warning:var(--kohaku-500);
+  --status-danger:var(--shu-400);
+  --status-info:var(--a-400);
+}
+[data-theme="light"]{
+  --bg-canvas:var(--washi-200);
+  --bg-base:var(--washi-100);
+  --surface-card:#FFFFFF;
+  --surface-raised:#FFFFFF;
+  --surface-sunken:var(--washi-200);
+  --surface-inset:#E9EDF3b3;
+  --surface-hover:#0B10170a;
+  --overlay-scrim:#0B1017a6;
+
+  --text-strong:var(--ink-900);
+  --text-body:var(--ink-700);
+  --text-muted:#5A6879;
+  --text-faint:#8794A4;
+  --text-inverse:var(--washi-100);
+  --text-accent:var(--a-600);
+  --text-seal:var(--shu-600);
+
+  --border-hairline:#B4C0CD80;
+  --border-strong:#8794A4;
+  --border-accent:var(--a-500);
+  --border-focus:var(--a-500);
+
+  --accent-solid:var(--a-600);
+  --accent-solid-hover:var(--a-500);
+  --accent-quiet:color-mix(in srgb,var(--a-600) 10%,transparent);
+  --accent-on:#FFFFFF;
+  --seal-solid:var(--shu-500);
+
+  --status-success:#4E7D5F;
+  --status-warning:#9C7326;
+  --status-danger:var(--shu-600);
+  --status-info:var(--a-600);
+}

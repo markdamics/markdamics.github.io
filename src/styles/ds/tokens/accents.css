@@ -1,0 +1,20 @@
+/* Accent themes. Set data-accent on <html> or any container; combine freely with data-theme.
+   Each scope supplies one 5-step ramp; every accent-derived token (fills, hairlines, washes,
+   glows, focus rings) is computed from it, so a single attribute retints the whole system.
+   <html data-theme="light" data-accent="matcha">  */
+:root,[data-accent="tsuki"]{--a-200:#DCEBF7;--a-300:#B7D8F0;--a-400:#8CBFE4;--a-500:#5C9BC9;--a-600:#3E7AA6}
+[data-accent="matcha"]{--a-200:#DFEDE2;--a-300:#B9D8C0;--a-400:#8CBF9B;--a-500:#5F9A72;--a-600:#427857}
+[data-accent="fuji"]{--a-200:#E7E2F4;--a-300:#CBC1E7;--a-400:#A99BD6;--a-500:#7F6EB4;--a-600:#5E4E92}
+[data-accent="sakura"]{--a-200:#F7E3E8;--a-300:#EFC5CF;--a-400:#E2A2B4;--a-500:#C4788E;--a-600:#9E566C}
+[data-accent="kohaku"]{--a-200:#F6E9D2;--a-300:#EBD3A6;--a-400:#D8A857;--a-500:#B4842F;--a-600:#8E6520}
+[data-accent="seiji"]{--a-200:#DDEEEB;--a-300:#B5DBD5;--a-400:#7FBFB6;--a-500:#549C93;--a-600:#3A7A72}
+[data-accent="shu"]{--a-200:#F8DED4;--a-300:#F0BBA8;--a-400:#E4714D;--a-500:#CF5533;--a-600:#A84124}
+[data-accent="wakaba"]{--a-200:#E6EFCF;--a-300:#CDDFA4;--a-400:#A9C46E;--a-500:#849F49;--a-600:#647C32}
+[data-accent="nezu"]{--a-200:#E2E6EB;--a-300:#C0C8D2;--a-400:#98A5B4;--a-500:#71808F;--a-600:#53616F}
+
+/* Aliases must be re-declared inside the accent scope: var() resolves where a custom
+   property is DECLARED, so :root aliases would keep the default ramp for descendants.
+   Put data-accent on the SAME element as data-theme (usually <html>) — a light theme on an
+   ancestor with the accent on a descendant will fall back to the dark mapping. */
+[data-accent]{--accent-solid:var(--a-400);--accent-solid-hover:var(--a-300);--text-accent:var(--a-300);--border-accent:var(--a-500);--border-focus:var(--a-400);--status-info:var(--a-400);--accent-quiet:color-mix(in srgb,var(--a-400) 12%,transparent);--glow-accent:0 0 24px -6px color-mix(in srgb,var(--a-400) 46%,transparent);--glow-edge:inset 0 0 0 1px color-mix(in srgb,var(--a-400) 22%,transparent);--glow-focus:0 0 0 1px var(--a-400),0 0 0 4px color-mix(in srgb,var(--a-400) 14%,transparent)}
+[data-theme="light"][data-accent]{--accent-solid:var(--a-600);--accent-solid-hover:var(--a-500);--text-accent:var(--a-600);--border-accent:var(--a-500);--border-focus:var(--a-500);--status-info:var(--a-600);--accent-quiet:color-mix(in srgb,var(--a-600) 10%,transparent);--glow-accent:0 0 24px -8px color-mix(in srgb,var(--a-600) 26%,transparent);--glow-edge:inset 0 0 0 1px color-mix(in srgb,var(--a-600) 14%,transparent);--glow-focus:0 0 0 1px var(--a-500),0 0 0 4px color-mix(in srgb,var(--a-600) 14%,transparent)}

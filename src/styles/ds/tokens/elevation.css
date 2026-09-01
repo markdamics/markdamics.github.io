@@ -1,0 +1,25 @@
+/* Elevation in Maho is mostly light, not shadow: a hairline plus a faint bloom.
+   Drop shadows stay long, soft and nearly black — lantern light, not a spotlight. */
+:root{
+  --shadow-none:none;
+  --shadow-sm:0 1px 2px #04060a4d;
+  --shadow-md:0 8px 24px -8px #04060a80;
+  --shadow-lg:0 24px 64px -20px #04060ab3;
+  --shadow-inset-hair:inset 0 1px 0 #ffffff0a;
+
+  --glow-focus:0 0 0 1px var(--border-focus),0 0 0 4px color-mix(in srgb,var(--accent-solid) 14%,transparent);
+  --glow-accent:0 0 24px -6px color-mix(in srgb,var(--accent-solid) 46%,transparent);
+  --glow-edge:inset 0 0 0 1px color-mix(in srgb,var(--accent-solid) 22%,transparent);
+
+  --blur-veil:blur(20px);
+  --blur-scrim:blur(6px);
+}
+[data-theme="light"]{
+  --shadow-sm:0 1px 2px #0b10171a;
+  --shadow-md:0 8px 24px -10px #0b101726;
+  --shadow-lg:0 24px 64px -24px #0b101733;
+  --shadow-inset-hair:inset 0 1px 0 #ffffff;
+  --glow-focus:0 0 0 1px var(--border-focus),0 0 0 4px color-mix(in srgb,var(--accent-solid) 14%,transparent);
+  --glow-accent:0 0 24px -8px color-mix(in srgb,var(--accent-solid) 26%,transparent);
+  --glow-edge:inset 0 0 0 1px color-mix(in srgb,var(--accent-solid) 14%,transparent);
+}

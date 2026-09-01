@@ -1,0 +1,15 @@
+/* Ma (間) — negative space is a component. Base unit 4px; jumps widen at the top. */
+:root{
+  --space-0:0;--space-1:2px;--space-2:4px;--space-3:8px;--space-4:12px;--space-5:16px;
+  --space-6:24px;--space-7:32px;--space-8:48px;--space-9:64px;--space-10:96px;--space-11:128px;--space-12:192px;
+
+  --gutter-inline:24px;
+  --section-y:96px;
+  --card-pad:24px;
+  --field-pad-x:14px;--field-pad-y:10px;
+  --control-h-sm:30px;--control-h-md:38px;--control-h-lg:46px;
+
+  --measure-prose:62ch;
+  --width-content:1160px;
+  --width-narrow:720px;
+}
