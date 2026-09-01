@@ -2,7 +2,7 @@ import type { HTMLAttributes, ReactNode } from 'react';
 
 type Variant = 'default' | 'raised' | 'quiet' | 'glow';
 
-export interface CardProps extends HTMLAttributes<HTMLDivElement> {
+export interface CardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
   variant?: Variant;
   eyebrow?: ReactNode;
   title?: ReactNode;
