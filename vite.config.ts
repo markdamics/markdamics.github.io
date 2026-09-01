@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Project is hosted at https://<user>.github.io/personal_page/ — base must match the repo name.
+// User-page repo (markdamics.github.io) — served at the domain root.
 export default defineConfig({
-  base: '/personal_page/',
+  base: '/',
   plugins: [react()],
 });
