@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { IconButton } from './ds';
 import { logoIconPath } from '../data/site';
@@ -18,6 +19,11 @@ interface HeaderProps {
 export function Header({ theme, onToggleTheme }: HeaderProps) {
   const location = useLocation();
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
 
   return (
     <header className="site-header">
@@ -37,12 +43,28 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
             </Link>
           ))}
         </nav>
+        <div className="site-header__spacer" />
         <IconButton
           icon={theme === 'dark' ? 'sun' : 'moon-star'}
           label="Switch theme"
           onClick={onToggleTheme}
         />
+        <IconButton
+          className="site-nav-toggle"
+          icon={menuOpen ? 'x' : 'menu'}
+          label="Menu"
+          onClick={() => setMenuOpen((open) => !open)}
+        />
       </div>
+      {menuOpen && (
+        <nav className="site-nav-mobile">
+          {NAV_ITEMS.map((item) => (
+            <Link key={item.to} to={item.to} data-active={location.pathname === item.to}>
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+      )}
     </header>
   );
 }
